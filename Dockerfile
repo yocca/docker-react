@@ -1,6 +1,6 @@
 FROM node:alpine
 WORKDIR '/app'
-COPY package.json .
+COPY package*.json ./
 RUN npm install
 COPY --chown=node:node ./ ./
 RUN npm run build
